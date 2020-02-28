@@ -1,0 +1,19 @@
+<section class="lib-tabs">
+  <nav class="lib-tabs__header">
+    <ul>
+      <li *ngFor="let item of collection">
+        <a
+          (click)="changeTab($event, item)"
+          [ngClass]="{ 'active': item.active }"
+          class="lib-tabs__item"
+          [id]="generateId(item.label)"
+          >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="lib-tabs__content">
+    <ng-content></ng-content>
+  </div>
+</section>

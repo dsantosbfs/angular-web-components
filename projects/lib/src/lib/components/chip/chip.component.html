@@ -1,0 +1,9 @@
+<div class="chip" [ngClass]="{ 'small' : small }">
+  <div class="chip__content">
+    <label>{{label}}</label>
+    <button
+      type="button"
+      (click)="onClick()"
+      *ngIf="remove">&times;</button>
+  </div>
+</div>

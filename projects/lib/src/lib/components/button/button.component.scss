@@ -1,0 +1,68 @@
+@import '../../shared/scss/main';
+
+button {
+  height: 48px;
+  padding: 0 20px;
+  transition: background-color .25s;
+  border-radius: $ds-border-radius-default;
+  cursor: pointer;
+
+  &.small {
+    height: 32px;
+  }
+
+  &.loading {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+  }
+
+  &.btn {
+
+    &-primary {
+      border: 0;
+      background-color: $ds-primary;
+      color: $ds-white;
+
+      &:hover,
+      &:focus {
+        background-color: $ds-primary-light;
+      }
+
+      &:active {
+        background-color: $ds-primary;
+      }
+
+      &:disabled {
+        background-color: $ds-gray-lighter-2;
+        cursor: default;
+      }
+
+      &.loading {
+        // background-image: url($assets-url + 'assets/images/loaders/primary-button-loader.gif');
+      }
+    }
+
+    &-secundary {
+      border: 1px solid $ds-primary;
+      background-color: transparent;
+      color: $ds-primary;
+
+      &:hover,
+      &:focus {
+        background-color: $ds-primary;
+        color: $ds-white;
+      }
+
+      &:disabled {
+        background-color: $ds-gray-lighter-3;
+        color: $ds-gray;
+        cursor: default;
+      }
+
+      &.loading {
+        // background-image: url($assets-url + 'assets/images/loaders/secundary-button-loader.gif');
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div #button class="helper" *ngIf="text" [ngClass]="{ 'active': showHelper }">
+  <a
+    href="#"
+    aria-label="Ajuda"
+    (click)="onClick($event)"
+    (keyup)="onKeyup($event)"
+    (blur)="onBlur()">
+    <ng-content></ng-content>
+  </a>
+  <button
+    aria-label="Ajuda"
+    class="helper__button"
+    type="button"
+    (click)="onClick($event)"
+    (keyup)="onKeyup($event)"
+    (blur)="onBlur()">
+    ?
+  </button>
+  <div #tooltip class="helper__tooltip" [ngClass]="positionClassName" *ngIf="showHelper">
+    <div #tooltipContent class="content" [innerHtml]="text"></div>
+  </div>
+</div>

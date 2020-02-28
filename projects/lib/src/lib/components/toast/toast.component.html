@@ -1,0 +1,12 @@
+<div class="toast" [ngClass]="{
+  'show': show,
+  'success': type === 'success',
+  'error': type === 'error',
+  'warning': type === 'warning'
+}">
+  <i class="fa" [ngClass]="getIcon" aria-hidden="true"></i>
+  <p>
+    {{ message }}
+  </p>
+  <button type="button" class="toast__close" (click)="close()">&times;</button>
+</div>

@@ -1,0 +1,25 @@
+@import '../../shared/scss/main';
+
+.card-group {
+  margin-bottom: 48px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 26px;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 26px;
+    }
+
+    &__title {
+      margin: 0;
+    }
+  }
+}

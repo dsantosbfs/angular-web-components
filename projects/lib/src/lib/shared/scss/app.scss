@@ -1,0 +1,119 @@
+// Estes são os padrões de border radius
+$border-radius-one: 3px;
+$border-radius-two: 5px;
+$border-radius-three: 8px;
+$border-radius-circle: 50%;
+// Linha horizontal primária
+$horizontal-one: rgb(94, 67, 203);
+// Linha horizontal secundária
+$horizontal-two: rgb(37, 233, 233);
+// Linha horizontal cinza
+$horizontal-three: rgb(204, 204, 204);
+// Estes são os padrões de cores para borders
+$border-color-one: rgb(7, 7, 7);
+$border-color-two: rgb(153, 153, 153);
+// Escala de Cor Primária
+$primary-brand-one: rgb(94, 67, 203);
+$primary-brand-two: rgb(36, 18, 106);
+$primary-brand-three: rgb(100, 83, 168);
+// Escala de Cor Secundária
+$secondary-brand-one: rgb(37, 233, 233);
+$secondary-brand-two: rgb(19, 201, 201);
+$secondary-brand-three: rgb(69, 230, 230);
+// Escala de Cor de Interface
+$ui-one: rgb(245, 247, 250);
+$ui-two: rgb(238, 241, 246);
+$ui-three: rgb(192, 192, 192);
+$ui-four: rgb(192, 192, 192);
+// Escala de Cinza
+$white: rgb(255, 255, 255);
+$gray-one: rgb(204, 204, 204);
+$gray-two: rgb(153, 153, 153);
+$gray-three: rgb(102, 102, 102);
+$gray-four: rgb(51, 51, 51);
+$black: rgb(51, 51, 51);
+// Escala de Amarelo
+$yellow-one: rgb(241, 196, 15);
+$yellow-two: rgb(247, 220, 111);
+$yellow-three: rgb(250, 237, 183);
+// Escala de Vermelho
+$red-one: rgb(231, 76, 60);
+$red-two: rgb(241, 148, 138);
+$red-three: rgb(247, 201, 196);
+// Escala de Azul
+$blue-one: rgb(52, 152, 219);
+$blue-two: rgb(133, 193, 233);
+$blue-three: rgb(194, 224, 244);
+// Escala de Verde
+$green-one: rgb(46, 204, 113);
+$green-two: rgb(130, 224, 170);
+$green-three: rgb(192, 239, 212);
+// Escala de Violeta
+$violet-one: rgb(188, 32, 123);
+$violet-two: rgb(215, 121, 176);
+$violet-three: rgb(234, 188, 215);
+// Escala de Rosa
+$pink-one: rgb(250, 198, 217);
+$pink-two: rgb(252, 221, 232);
+$pink-three: rgb(253, 237, 243);
+// Escala de Laranja
+$orange-one: rgb(255, 138, 0);
+$orange-two: rgb(255, 185, 102);
+$orange-three: rgb(255, 219, 178);
+$box-shadow-one: 2px 2px 2px 3px rgba(92, 106, 196, .1);
+$box-shadow-two: 3px 3px 3px 10px rgba(92, 106, 196, .1);
+$drop-shadow-one: 0 0 0 3px rgba(92, 106, 196, 0.1);
+$drop-shadow-two: 3px 0 0 10px rgba(92, 106, 196, 0.1);
+$size-one: 44px;
+$size-two: 38px;
+$size-three: 40px;
+$size-four: 24px;
+$size-five: 20px;
+$size-six: 18px;
+$size-seven: 16px;
+$size-eight: 14px;
+$size-nine: 12px;
+$font-family-one: 'Work Sans', Helvetica, Arial, sans-serif;
+$font-family-two: 'Roboto', Helvetica, Arial, sans-serif;
+$letter-spacing-one: 2.5px;
+$letter-spacing-two: 1.5px;
+$letter-spacing-three: 0;
+$letter-spacing-four: -0.5px;
+$letter-spacing-five: -1.5px;
+$weight-one: 700;
+$weight-two: 600;
+$weight-three: 400;
+$weight-four: 300;
+$line-height-one: 1.6;
+$line-height-two: 1.3;
+$line-height-three: 1;
+$media-query-one: 768px;
+$media-query-two: 1024px;
+$opacity-one: 0.5;
+$opacity-two: 0.25;
+$height-footer: 50px;
+$tappable-square: 44px;
+$duration-one: 0.08s;
+$duration-two: 0.5s;
+$space-one: 8px;
+$space-two: 16px;
+$space-three: 24px;
+$space-four: 32px;
+$space-five: 40px;
+$space-six: 48px;
+$space-seven: 56px;
+$space-eight: 64px;
+// Texto comum
+$color-text-one: rgb(7, 7, 7);
+// Texto cinza
+$color-text-two: rgb(153, 153, 153);
+// Feedback de Sucesso
+$color-text-three: rgb(46, 204, 113);
+// Feedback de erro
+$color-text-four: rgb(231, 76, 60);
+// Feedback de atenção.
+$color-text-five: rgb(241, 196, 15);
+// Feedback de informação
+$color-text-six: rgb(52, 152, 219);
+// Texto invertido
+$color-text-seven: rgb(255, 255, 255);

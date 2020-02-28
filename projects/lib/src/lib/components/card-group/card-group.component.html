@@ -1,0 +1,9 @@
+<section class="card-group">
+  <header class="card-group__header">
+    <h3 class="card-group__header__title">{{ label }}</h3>
+    <ng-content select="[header]"></ng-content>
+  </header>
+  <div class="card-group__content">
+    <ng-content select="[body]"></ng-content>
+  </div>
+</section>

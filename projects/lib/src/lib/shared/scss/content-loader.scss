@@ -1,0 +1,103 @@
+
+@import 'variables';
+
+@mixin loader {
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 100px;
+  background-color: $ds-gray;
+  color: transparent;
+  opacity: .2;
+  animation: fading 1.5s infinite;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-loader {
+
+  &.loading {
+
+    p {
+
+      &:empty {
+        @include loader;
+
+        width: 40%;
+        height: 12px;
+      }
+    }
+
+    h2,
+    h3,
+    h4 {
+
+      &:empty {
+        @include loader;
+
+        height: 16px;
+      }
+    }
+
+    td {
+
+      &:before {
+        @include loader;
+
+        height: 12px;
+        content: '';
+      }
+    }
+  }
+}
+
+.chart-loader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  height: 120px;
+  margin: 0 auto 30px;
+
+  div {
+    @include loader;
+
+    position: relative;
+    max-width: 110px;
+    margin: 0 15px;
+    border-radius: 0;
+
+    &:nth-child(1) {
+      height: 30%;
+    }
+
+    &:nth-child(2) {
+      height: 80%;
+    }
+
+    &:nth-child(3) {
+      height: 60%;
+    }
+
+    &:nth-child(4) {
+      height: 20%;
+    }
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      bottom: -20px;
+      width: 100%;
+      height: 10px;
+      border-radius: 100px;
+      background-color: inherit;
+      content: '';
+    }
+  }
+}

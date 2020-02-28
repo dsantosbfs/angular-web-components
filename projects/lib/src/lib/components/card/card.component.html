@@ -1,0 +1,30 @@
+<section
+  [id]="generateId(data.title)"
+  class="card content-loader"
+  [ngClass]="[type, status, (loading ? 'loading': '')]">
+  <header *ngIf="!isCardDefault">
+    <span class="bigger item-loading">
+      {{ data.number }}
+    </span>
+    <p class="sub-title">{{ data.title }}</p>
+    <lib-helper
+      [text]="data.helper"
+    >
+    </lib-helper>
+  </header>
+
+  <header *ngIf="isCardDefault">
+    <h4>{{ data.title }}</h4>
+    <lib-helper
+      [text]="data.helper"
+    >
+    </lib-helper>
+    <p class="description">{{ data.description }}</p>
+  </header>
+  <div class="card__content" *ngIf="isCardDefault">
+    <ng-content></ng-content>
+  </div>
+  <div class="card__disabled" *ngIf="disable">
+    <p [innerHTML]="disableMessage"></p>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+@import '../../../node_modules/bulma/sass/utilities/_all';
+@import '../../../node_modules/bulma/sass/grid/columns';
+
+$fa-font-path:        '//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts' !default;
+$fa-version:          '4.7.0' !default;
+
+@import '../../../node_modules/font-awesome/scss/_path';
+
+@import '../../environments/environment';
+
+@import 'animations';
+@import 'app';
+@import 'content-loader';
+@import 'table';
+@import 'typography';
+@import 'variables';

@@ -1,0 +1,68 @@
+@import '../../shared/scss/main';
+
+.lib-tabs {
+
+  &__header {
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid $ds-gray;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    & ul {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    flex: 0 0 auto;
+    height: 58px;
+    padding: 16px;
+    color: $ds-gray;
+    white-space: nowrap;
+    cursor: pointer;
+    will-change: color, bottom, border-bottom, cursor, font-weight;
+
+    @media screen and (min-width: $tablet) {
+      padding: 16px 30px;
+    }
+
+    &:hover {
+      color: $ds-gray-light;
+      font-weight: bold;
+    }
+
+    &.active {
+      bottom: -1px;
+      border-bottom: 2px solid $ds-primary;
+      color: $ds-primary;
+      font-weight: bold;
+      cursor: default;
+
+      &:hover {
+        color: $ds-primary;
+      }
+    }
+  }
+
+  &__content {
+    padding: 10px 0;
+
+    ::ng-deep {
+
+      > div {
+        display: none;
+        will-change: display;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

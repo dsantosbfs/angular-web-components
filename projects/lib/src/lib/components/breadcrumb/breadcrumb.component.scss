@@ -1,0 +1,88 @@
+@import '../../shared/scss/main';
+
+.bread-crumb {
+  display: flex;
+  margin-bottom: 12px;
+  color: $ds-gray;
+  font-size: 14px;
+  overflow: auto;
+
+  li {
+    margin-right: 12px;
+    font-size: inherit;
+    white-space: nowrap;
+
+    &:first-of-type + li {
+
+      &:before {
+        margin-right: 0;
+        content: '';
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.bread-crumb__back {
+      padding-right: 12px;
+      border-right: 1px solid $ds-gray;
+      background-color: $ds-gray-lighter-1;
+
+      a {
+        padding-left: 30px;
+        // background-image: url('assets/images/icons/arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
+      + li {
+
+        &:before {
+          margin-right: 0;
+          content: '';
+        }
+      }
+    }
+
+    &.bread-crumb__item {
+
+      &:before {
+        display: inline-block;
+        margin-right: 10px;
+        content: '/';
+      }
+
+      &:first-child {
+
+        &:before {
+          margin-right: 0;
+          content: '';
+        }
+      }
+
+      a {
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    a,
+    span {
+      color: inherit;
+      font-size: inherit;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

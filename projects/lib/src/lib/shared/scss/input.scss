@@ -1,0 +1,28 @@
+@import 'variables';
+
+input,
+select {
+  width: 100%;
+  height: 48px;
+  padding: 13px 16px;
+  transition: border-color .2s;
+  border: 1px solid $ds-gray;
+  border-radius: $ds-border-radius-default;
+  background-color: $ds-white;
+  font-size: 16px;
+  will-change: border-color;
+
+  &:focus,
+  &:hover {
+    border-color: $ds-primary;
+
+    &::placeholder {
+      color: $ds-black;
+    }
+  }
+
+  &::placeholder {
+    color: $ds-gray;
+    will-change: color;
+  }
+}

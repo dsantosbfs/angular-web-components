@@ -1,0 +1,124 @@
+@import '../../shared/scss/main';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 48px;
+  margin-top: 45px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+  }
+
+  &__nav {
+    margin-right: 15px;
+    white-space: nowrap;
+
+    &__direction {
+
+      &:hover {
+        background-color: transparent !important;
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: $ds-border-radius-default;
+      background-color: transparent;
+      cursor: pointer;
+
+      & + button {
+        margin-left: 5px;
+      }
+
+      &.active {
+        background-color: $ds-primary;
+        color: $ds-white;
+        font-weight: bold;
+
+        &:hover {
+          color: $ds-black;
+        }
+      }
+
+      &:hover {
+        background-color: $ds-primary-lighter;
+
+        &:disabled {
+          background-color: transparent;
+          text-decoration: none;
+          cursor: default;
+        }
+      }
+
+      i {
+        margin: 10px;
+        font-size: 13px;
+        font-weight: normal;
+      }
+
+      span {
+        display: none;
+
+        @media screen and (min-width: $tablet) {
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: $tablet) {
+
+        &:first-of-type,
+        &:last-of-type {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  &__options {
+    display: none;
+    align-items: center;
+    height: inherit;
+
+    label {
+      padding-right: 10px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+
+    @media screen and (max-width: 910px) {
+
+      .hide-on-910 {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid $ds-gray;
+
+    @media screen and (max-width: 975px) {
+
+      .hide-on-975 {
+        display: none;
+      }
+    }
+  }
+
+  lib-select {
+    display: inline-block;
+    width: 80px;
+  }
+}

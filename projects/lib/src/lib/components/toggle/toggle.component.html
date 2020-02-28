@@ -1,0 +1,13 @@
+<div>
+  <label [for]="generateId(label)">
+    <input
+      [attr.disabled]="disabled ? 'true' : null"
+      [id]="generateId(label)"
+      [name]="generateId(label)"
+      type="checkbox"
+      (change)="onChange($event)"
+      [attr.checked]="checked ? 'checked': null"
+    />
+    <span>{{label}}</span>
+  </label>
+</div>

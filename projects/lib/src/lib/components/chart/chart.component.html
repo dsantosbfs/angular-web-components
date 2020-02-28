@@ -1,0 +1,13 @@
+
+<div style="display: block" *ngIf="datasets">
+  <canvas
+    baseChart
+    [datasets]="datasets"
+    [labels]="labels"
+    [options]="chartOptions"
+    [chartType]="type"
+    *ngIf="type !== 'doughnut'"
+    >
+  </canvas>
+  <canvas #doughnut *ngIf="type === 'doughnut'"></canvas>
+</div>

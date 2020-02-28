@@ -1,0 +1,39 @@
+/* Medias */
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+/* Colors */
+
+$ds-primary: #3d2892;
+$ds-primary-light: #6e5eae;
+$ds-primary-lighter: #cec9e4;
+
+$ds-black-light: #010b19;
+$ds-black: #1e1e1e;
+$ds-white: #ffffff;
+
+$ds-gray-lighter-4: #e7e9ed;
+$ds-gray-lighter-3: #f1f1f1;
+$ds-gray-lighter-2: #b9babc;
+$ds-gray-lighter-1: #f5f6f8;
+$ds-gray-lighter: #d9dce4;
+$ds-gray-light: #737373;
+$ds-gray-light-1: #97999b;
+$ds-gray: #747679;
+
+$ds-alpha-gray-20: rgba(7, 18, 37, .2);
+$ds-alpha-gray-50: rgba(160, 169, 186, .5);
+$ds-alpha-gray-80: rgba(0, 0, 0, .8);
+
+$ds-error: #c14134;
+$ds-success: #2ecc71;
+$ds-warning: #ffdb58;
+
+/* Shadows */
+
+$ds-shadow-one: 0 2px 8px 0 $ds-alpha-gray-20;
+
+/* Borders */
+
+$ds-border-radius-default: 4px;

@@ -1,0 +1,17 @@
+<ul class="bread-crumb">
+  <li class="bread-crumb__back" *ngIf="previousPage">
+    <a [routerLink]="[previousPage.url, previousPage.params]">
+      Voltar
+    </a>
+  </li>
+  <li class="bread-crumb__item" *ngFor="let breadcrumb of breadcrumbs; let index = index">
+    <a
+      *ngIf="index < (breadcrumbs.length - 1)"
+      [routerLink]="[breadcrumb.url, breadcrumb.params]">{{ breadcrumb.label }}</a>
+
+    <span
+      *ngIf="index === (breadcrumbs.length - 1)">
+      {{ breadcrumb.label }}
+    </span>
+  </li>
+</ul>

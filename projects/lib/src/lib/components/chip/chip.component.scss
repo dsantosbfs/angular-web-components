@@ -1,0 +1,44 @@
+@import '../../shared/scss/main';
+
+.chip {
+  display: inline-block;
+  height: 24px;
+  padding: 0 8px;
+  transition: opacity .5s;
+  border-radius: 12px;
+  background-color: $ds-primary;
+  color: $ds-white;
+  line-height: 1;
+  will-change: opacity;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &.small {
+    height: 19px;
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    line-height: inherit;
+  }
+
+  label {
+    font-size: 11px;
+    line-height: inherit;
+  }
+
+  button {
+    height: 24px;
+    margin-left: 10px;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+}

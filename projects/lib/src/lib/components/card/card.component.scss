@@ -1,0 +1,111 @@
+@import '../../shared/scss/main';
+
+.card {
+  position: relative;
+  margin-bottom: 10px;
+  background-color: $ds-white;
+  color: $ds-black;
+  box-shadow: $ds-shadow-one;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 29px;
+  }
+
+  &.default {
+    padding: 16px;
+
+    header {
+
+      & > p {
+
+        &:last-child {
+          flex: 1 0 100%;
+        }
+      }
+    }
+
+    lib-helper {
+      margin-top: -5px;
+    }
+  }
+
+  &.big-number {
+    padding: 8px 16px;
+
+    header {
+      height: 48px;
+
+      .sub-title {
+        font-size: 16px;
+        white-space: pre-wrap;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &.warning {
+    color: $ds-error;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h4 {
+      flex: 2 1;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .bigger {
+      height: 40px;
+      margin-right: 15px;
+      text-align: right;
+    }
+
+    .sub-title {
+      flex: 1 1;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    margin-top: 25px;
+  }
+
+  &__disabled {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 11, 25, .75);
+    z-index: 10;
+
+    p {
+      height: 30px;
+      margin: 0 20px;
+      padding-left: 30px;
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: 22px;
+      color: $ds-white;
+      line-height: 30px;
+    }
+  }
+
+  lib-helper {
+    margin-left: 10px;
+  }
+}

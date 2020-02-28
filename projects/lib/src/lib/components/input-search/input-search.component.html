@@ -1,0 +1,14 @@
+<input
+  [(ngModel)]="value"
+  type="text"
+  [id]="generateId(placeholder)"
+  [attr.aria-label]="placeholder"
+  [placeholder]="placeholder"
+  (keyup)="onKeyup()" />
+
+<i class="fa fa-search" aria-hidden="true"></i>
+<button
+  *ngIf="showClearButton"
+  (click)="clearField()"
+  type="button"
+  class="clear-button">&times;</button>

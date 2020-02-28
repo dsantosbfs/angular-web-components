@@ -1,0 +1,32 @@
+@import 'variables';
+
+table {
+  width: 100%;
+  color: $ds-black;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+
+  th,
+  td {
+    padding: 15px 8px;
+    color: inherit;
+  }
+
+  thead {
+
+    th {
+      border-bottom: 1px solid $ds-gray-light;
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      &:hover {
+        background: $ds-gray-lighter;
+      }
+    }
+  }
+}

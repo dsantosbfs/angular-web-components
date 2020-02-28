@@ -1,0 +1,42 @@
+<div class="list-select" [ngClass]="{ 'disabled': disabled }">
+  <div class="list-select__header" [ngClass]="{'open': focus}">
+    <label [for]="generateId(label)" class="list-select__label">
+      {{ label }}
+    </label>
+    <input #input
+      [ngModel]="textValue$.value"
+      (blur)="onBlur()"
+      (focus)="onFocus()"
+      [id]="generateId(label)"
+      autocomplete="off"
+      class="list-select__input"
+      required
+      type="text"
+      readonly
+      placeholder="Selecione"
+    >
+
+    <i
+      class="list-select__icon-expand fa fa-angle-down"
+      (click)="onToggle()"
+      aria-hidden="true"></i>
+  </div>
+  <div class="list-select__content"
+    *ngIf="isOpen"
+    [ngClass]="{'open': focus}"
+  >
+    <div #listItem *ngFor="let item of items; let i = index"
+      class="list-select__item"
+      [ngClass]="{
+        'list-select__item--active': i === activeIndex,
+        'list-select__item--selected': item.selected
+      }"
+      (mousedown)="handleClick(item, i)"
+      (mousemove)="handleHover(i)"
+    >
+      <span>
+        {{ item.label }}
+      </span>
+    </div>
+  </div>
+</div>

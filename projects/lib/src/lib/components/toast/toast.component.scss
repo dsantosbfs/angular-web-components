@@ -1,0 +1,77 @@
+@import '../../shared/scss/main';
+
+.toast {
+  display: flex;
+  position: fixed;
+  top: 40px;
+  right: -800px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 12px;
+  transition: right .4s;
+  border-radius: $ds-border-radius-default;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  box-shadow: 0 2px 8px 0 $ds-alpha-gray-50;
+  z-index: 5000;
+
+
+  &.show {
+    right: 20px;
+    left: 20px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    max-width: 300px;
+
+    &.show {
+      right: 30px;
+      left: unset;
+    }
+  }
+
+  &.success {
+    background-color: $ds-success;
+    color: $ds-white;
+  }
+
+  &.error {
+    background-color: $ds-error;
+    color: $ds-white;
+  }
+
+  &.warning {
+    background-color: $ds-warning;
+    color: $ds-black;
+  }
+
+  &__close {
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: 34px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  i {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  p {
+    margin-right: 20px;
+
+    @media screen and (min-width: $mobile) {
+      max-width: 206px;
+    }
+  }
+}
